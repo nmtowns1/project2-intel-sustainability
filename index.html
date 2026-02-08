@@ -3,13 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore Intel's sustainability journey from 1968 to 2024, showcasing our commitment to environmental responsibility, renewable energy, and net-zero emissions goals." />
   <title>Intel: Sustainability Through the Ages</title>
+  <!-- Bootstrap CSS for grid system and RTL support -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-ltr" />
+  <!-- Bootstrap RTL CSS - loaded dynamically when needed -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.rtl.min.css" rel="stylesheet" id="bootstrap-rtl" disabled />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
+  <!-- Skip to main content link for keyboard users -->
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <!-- Header / Hero Section -->
-  <header>
+  <header role="banner">
     <div>
       <!-- Ask Copilot to teach you about `.svg`. 🙂 You'll need to resize the logo with CSS. -->
       <img src="img/intel-header-logo.svg" alt="Intel Logo" />
@@ -27,11 +35,21 @@
     </div>
   </header>
 
-  <!-- Timeline Cards Section -->
-  <section>
+  <!-- Main Content -->
+  <main id="main-content">
 
-    <!-- Card 1: 1968 -->
-    <div>
+  <!-- Timeline Container with Navigation Arrows -->
+  <div class="timeline-container" role="region" aria-label="Intel sustainability timeline">
+    <!-- Left Arrow Button -->
+    <button class="timeline-nav timeline-nav-left" id="scrollLeft" aria-label="Scroll left">
+      &#8249;
+    </button>
+    
+    <!-- Timeline Cards Section -->
+    <section class="timeline-section" id="timelineSection" aria-label="Historical timeline cards">
+
+    <!--Card 1: 1968 -->
+    <article tabindex="0">
       <img src="img/1.jpg" alt="Intel Founded" />
       <h2>1968</h2>
       <h3>Intel Founded</h3>
@@ -40,10 +58,10 @@
         NM Electronics to Intel Corporation, laying the foundation for 
         decades of technological innovation.
       </p>
-    </div>
+    </article>
 
     <!-- Card 2: 1971 -->
-    <div>
+    <article tabindex="0">
       <img src="img/2.jpg" alt="First Microprocessor" />
       <h2>1971</h2>
       <h3>First Microprocessor</h3>
@@ -52,10 +70,10 @@
         igniting the microprocessor revolution and propelling the future 
         of computing devices.
       </p>
-    </div>
+    </article>
 
     <!-- Card 3: 1978 -->
-    <div>
+    <article tabindex="0">
       <img src="img/3.jpg" alt="8086 Processor" />
       <h2>1978</h2>
       <h3>8086 Processor</h3>
@@ -63,10 +81,10 @@
         Launch of the 8086 processor, establishing the x86 architecture 
         that drives countless PCs and servers in the modern era.
       </p>
-    </div>
+    </article>
 
     <!-- Card 4: 1985 -->
-    <div>
+    <article tabindex="0">
       <img src="img/4.jpg" alt="386 Processor" />
       <h2>1985</h2>
       <h3>386 Processor</h3>
@@ -75,10 +93,10 @@
         ushering in a new era of performance and multitasking for 
         personal computers.
       </p>
-    </div>
+    </article>
 
     <!-- Card 5: 2006 -->
-    <div>
+    <article tabindex="0">
       <img src="img/5.jpg" alt="Peak GHG Emissions" />
       <h2>2006</h2>
       <h3>Peak GHG Emissions</h3>
@@ -88,10 +106,10 @@
         chemical abatement, renewable energy, and energy-efficient 
         manufacturing to reverse this trend.
       </p>
-    </div>
+    </article>
 
     <!-- Card 6: 2020 -->
-    <div>
+    <article tabindex="0">
       <img src="img/6.jpg" alt="RISE Strategy" />
       <h2>2020</h2>
       <h3>RISE Strategy</h3>
@@ -100,10 +118,10 @@
         Enabling) strategy and 2030 goals, aiming to drive industry-wide 
         progress on climate action, water stewardship, and waste reduction.
       </p>
-    </div>
+    </article>
 
     <!-- Card 7: 2022 -->
-    <div>
+    <article tabindex="0">
       <img src="img/7.jpg" alt="Net-Zero By 2040" />
       <h2>2022</h2>
       <h3>Net-Zero By 2040</h3>
@@ -112,10 +130,10 @@
         gas emissions (Scope 1 and 2) across its global operations 
         by 2040, building on years of environmental initiatives.
       </p>
-    </div>
+    </article>
 
     <!-- Card 8: 2023 -->
-    <div>
+    <article tabindex="0">
       <img src="img/8.jpg" alt="Renewable Electricity" />
       <h2>2023</h2>
       <h3>Renewable Electricity</h3>
@@ -124,10 +142,10 @@
         helping to drastically lower carbon emissions and driving progress 
         toward Intel's long-term sustainability goals.
       </p>
-    </div>
+    </article>
 
     <!-- Card 9: 2024 -->
-    <div>
+    <article tabindex="0">
       <img src="img/9.jpg" alt="Sustainability Summit" />
       <h2>2024</h2>
       <h3>Sustainability Summit</h3>
@@ -136,11 +154,341 @@
         government officials, and industry leaders to collaborate on 
         next-generation sustainable semiconductor manufacturing.
       </p>
+    </article>
+  </section>
+  
+  <!-- Right Arrow Button -->
+  <button class="timeline-nav timeline-nav-right" id="scrollRight" aria-label="Scroll right">
+    &#8250;
+  </button>
+</div>
+
+  <!-- New Three-Column Section using Bootstrap Grid -->
+  <section class="container my-5" aria-label="Sustainability focus areas">
+    <h2 class="text-center mb-4">Key Focus Areas</h2>
+    
+    <!-- Bootstrap Row - creates a horizontal container for columns -->
+    <div class="row g-4">
+      
+      <!-- Column 1 - takes full width on mobile, 4 parts of 12 on desktop -->
+      <div class="col-12 col-md-4">
+        <div class="p-4 border rounded">
+        <h3>RISE Strategy</h3>
+          <p>
+            Under its RISE (Responsible, Inclusive, Sustainable, Enabling) strategy, 
+            Intel sets ambitious 2030 goals, including driving industry-wide 
+            progress on climate action, water stewardship, and waste reduction.
+          </p>
+          <a href="#rise-strategy" aria-label="Learn more about RISE Strategy">Learn More</a>
+        </div>
+      </div>
+      
+      <!-- Column 2 - takes full width on mobile, 4 parts of 12 on desktop -->
+      <div class="col-12 col-md-4">
+        <div class="p-4 border rounded">
+          <h3>Commitment</h3>
+            <p>
+              In 2022, Intel pledged to achieve net-zero greenhouse gas emissions 
+              (Scope 1 and 2) by 2040. This commitment builds on decades of 
+              environmental initiatives and partnerships across the semiconductor 
+              industry.
+            </p>
+        <!-- Learn More Button -->
+             <a href="#commitment" aria-label="Learn more about Intel's net-zero commitment">Learn More</a>
+        </div>
+      </div>
+      
+      <!-- Column 3 - takes full width on mobile, 4 parts of 12 on desktop -->
+      <div class="col-12 col-md-4">
+        <div class="p-4 border rounded">
+          <h3>Water &amp; Waste</h3>
+            <p>
+              Intel conserves billions of gallons of water annually and 
+              collaborates with local communities to restore watersheds.
+              Intel also upcycles and recycles materials to reduce waste and 
+              advance a circular economy.
+            </p>
+        <!-- Learn More Button -->
+              <a href="#water-waste" aria-label="Learn more about water conservation and waste reduction">Learn More</a>
+        </div>
+      </div>
+      
     </div>
   </section>
-  <div id = "footer">
-    <p>Scroll to view timeline | Hover over cards to learn more!</p>
-  </div>
+
+  <!-- Newsletter Subscription Form using Bootstrap -->
+  <section class="container my-5 py-4" aria-label="Newsletter subscription">
+    <!-- Form container with background and padding -->
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8 col-lg-6">
+        <div class="p-4 bg-light rounded">
+          
+          <!-- Form heading -->
+          <h2 class="text-center mb-4">Stay Updated</h2>
+          <p class="text-center mb-4">
+            Subscribe to Intel's sustainability newsletter for the latest updates on our environmental initiatives.
+          </p>
+          
+          <!-- Bootstrap form -->
+          <form>
+            
+            <!-- Name input field -->
+            <div class="mb-3">
+              <label for="subscriberName" class="form-label">Name</label>
+              <input 
+                type="text" 
+                class="form-control" 
+                id="subscriberName" 
+                name="name"
+                placeholder="Enter your name"
+                autocomplete="name"
+                required
+              />
+            </div>
+            
+            <!-- Email input field -->
+            <div class="mb-3">
+              <label for="subscriberEmail" class="form-label">Email address</label>
+              <input 
+                type="email" 
+                class="form-control" 
+                id="subscriberEmail" 
+                name="email"
+                placeholder="name@example.com"
+                autocomplete="email"
+                required
+              />
+              <!-- Helper text below the input -->
+              <div class="form-text">We'll never share your email with anyone else.</div>
+            </div>
+            
+            <!-- Checkbox for agreeing to terms -->
+            <div class="mb-3 form-check">
+              <input 
+                type="checkbox" 
+                class="form-check-input" 
+                id="agreeTerms"
+                required
+              />
+              <label class="form-check-label" for="agreeTerms">
+                I agree to receive sustainability updates from Intel
+              </label>
+            </div>
+            
+            <!-- Submit button - full width on mobile, centered -->
+            <div class="d-grid">
+              <button type="submit" class="btn btn-primary btn-lg">Subscribe</button>
+            </div>
+            
+          </form>
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- Footer Section with Bootstrap -->
+  <footer class="bg-dark text-light py-4 mt-5" role="contentinfo">
+    <div class="container">
+      
+      <!-- Top row with navigation links -->
+      <div class="row mb-3">
+        <div class="col-12 text-center">
+          <!-- Navigation links as list -->
+          <nav aria-label="Footer navigation">
+          <ul class="list-inline mb-0">
+            <li class="list-inline-item">
+              <a href="#about" class="text-light text-decoration-none">About Intel</a>
+            </li>
+            <li class="list-inline-item" aria-hidden="true">|</li>
+            <li class="list-inline-item">
+              <a href="#privacy" class="text-light text-decoration-none">Privacy Policy</a>
+            </li>
+            <li class="list-inline-item" aria-hidden="true">|</li>
+            <li class="list-inline-item">
+              <a href="#terms" class="text-light text-decoration-none">Terms of Use</a>
+            </li>
+            <li class="list-inline-item" aria-hidden="true">|</li>
+            <li class="list-inline-item">
+              <a href="#contact" class="text-light text-decoration-none">Contact Us</a>
+            </li>
+          </ul>
+          </nav>
+        </div>
+      </div>
+      
+      <!-- Bottom row with copyright -->
+      <div class="row">
+        <div class="col-12 text-center">
+          <p class="mb-0 text-muted">
+            &copy; 2026 Intel Corporation. All rights reserved.
+          </p>
+          <p class="mb-0 text-muted small">
+            Intel's commitment to sustainability drives innovation for a better tomorrow.
+          </p>
+        </div>
+      </div>
+      
+    </div>
+  </footer>
+  
+  <!-- JavaScript for Timeline Navigation -->
+  <script>
+    // Get the timeline section and navigation buttons
+    const timelineSection = document.getElementById('timelineSection');
+    const scrollLeftBtn = document.getElementById('scrollLeft');
+    const scrollRightBtn = document.getElementById('scrollRight');
+    
+    // Scroll left when the left arrow is clicked
+    scrollLeftBtn.addEventListener('click', () => {
+      // Scroll by the width of one card plus gap (smooth behavior)
+      timelineSection.scrollBy({
+        left: -270,  // Width of one card (240px) + gap (15px) + some padding
+        behavior: 'smooth'  // Makes the scrolling smooth and animated
+      });
+    });
+    
+    // Scroll right when the right arrow is clicked
+    scrollRightBtn.addEventListener('click', () => {
+      // Scroll by the width of one card plus gap (smooth behavior)
+      timelineSection.scrollBy({
+        left: 270,  // Width of one card (240px) + gap (15px) + some padding
+        behavior: 'smooth'  // Makes the scrolling smooth and animated
+      });
+    });
+  </script>
+
+  <!-- RTL Detection and Application Script -->
+  <script>
+    // List of RTL language codes
+    const rtlLanguages = ['ar', 'he', 'fa', 'ur', 'yi', 'ji', 'iw', 'ps', 'sd', 'ug', 'arc', 'ckb', 'dv'];
+    
+    // Get references to Bootstrap stylesheets
+    const bootstrapLTR = document.getElementById('bootstrap-ltr');
+    const bootstrapRTL = document.getElementById('bootstrap-rtl');
+    
+    /**
+     * Check if a language code represents an RTL language
+     * @param {string} lang - Language code to check
+     * @return {boolean} - True if language is RTL
+     */
+    function isRTLLanguage(lang) {
+      if (!lang) return false;
+      // Extract the base language code (e.g., 'ar' from 'ar-SA')
+      const baseLang = lang.toLowerCase().split('-')[0];
+      return rtlLanguages.includes(baseLang);
+    }
+    
+    /**
+     * Apply or remove RTL styling based on language
+     * @param {string} lang - Language code
+     */
+    function applyRTL(lang) {
+      const isRTL = isRTLLanguage(lang);
+      const htmlElement = document.documentElement;
+      
+      if (isRTL) {
+        // Apply RTL
+        htmlElement.setAttribute('dir', 'rtl');
+        htmlElement.setAttribute('lang', lang);
+        // Enable Bootstrap RTL stylesheet
+        if (bootstrapRTL) bootstrapRTL.disabled = false;
+        if (bootstrapLTR) bootstrapLTR.disabled = true;
+        console.log('RTL mode activated for language:', lang);
+      } else {
+        // Apply LTR
+        htmlElement.setAttribute('dir', 'ltr');
+        htmlElement.setAttribute('lang', lang);
+        // Enable Bootstrap LTR stylesheet
+        if (bootstrapRTL) bootstrapRTL.disabled = true;
+        if (bootstrapLTR) bootstrapLTR.disabled = false;
+        console.log('LTR mode activated for language:', lang);
+      }
+    }
+    
+    /**
+     * Detect the current page language
+     * Checks multiple sources: html lang attribute, Google Translate elements, body lang
+     * @return {string} - Detected language code
+     */
+    function detectLanguage() {
+      // Check for Google Translate's language attribute on html or body
+      const htmlLang = document.documentElement.getAttribute('lang');
+      const bodyLang = document.body.getAttribute('lang');
+      
+      // Check for Google Translate frame
+      const gtFrame = document.querySelector('.goog-te-banner-frame');
+      if (gtFrame) {
+        // Google Translate is active, check for translated content
+        const translatedElement = document.querySelector('[lang]');
+        if (translatedElement) {
+          return translatedElement.getAttribute('lang');
+        }
+      }
+      
+      // Check for font tags that Google Translate adds
+      const fontElement = document.querySelector('font[class*="translated"]');
+      if (fontElement && fontElement.closest('[lang]')) {
+        return fontElement.closest('[lang]').getAttribute('lang');
+      }
+      
+      // Return body lang or html lang as fallback
+      return bodyLang || htmlLang || 'en';
+    }
+    
+    /**
+     * Initialize RTL detection and set up observers
+     */
+    function initializeRTLDetection() {
+      // Apply RTL based on initial language
+      const initialLang = detectLanguage();
+      applyRTL(initialLang);
+      
+      // Create a MutationObserver to watch for language changes
+      const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+          // Check if lang attribute changed
+          if (mutation.type === 'attributes' && mutation.attributeName === 'lang') {
+            const newLang = mutation.target.getAttribute('lang');
+            if (newLang) {
+              applyRTL(newLang);
+            }
+          }
+        });
+      });
+      
+      // Observe changes to html and body elements
+      observer.observe(document.documentElement, {
+        attributes: true,
+        attributeFilter: ['lang', 'dir']
+      });
+      
+      observer.observe(document.body, {
+        attributes: true,
+        attributeFilter: ['lang', 'dir'],
+        subtree: true // Watch all descendants for Google Translate changes
+      });
+      
+      // Also check periodically (every 2 seconds) for Google Translate changes
+      setInterval(() => {
+        const currentLang = detectLanguage();
+        const htmlLang = document.documentElement.getAttribute('lang');
+        // Only apply if language actually changed
+        if (currentLang !== htmlLang) {
+          applyRTL(currentLang);
+        }
+      }, 2000);
+    }
+    
+    // Initialize when DOM is fully loaded
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', initializeRTLDetection);
+    } else {
+      initializeRTLDetection();
+    }
+  </script>
   
 </body>
 </html>
