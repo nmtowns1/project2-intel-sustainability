@@ -319,3 +319,87 @@ html {
   }
 }
 
+/* ==============================================
+   RTL (Right-to-Left) Layout Adjustments
+   ============================================== */
+
+/* RTL specific adjustments for text direction */
+[dir="rtl"] body {
+  text-align: right;
+  direction: rtl;
+}
+
+/* Adjust timeline navigation arrows for RTL */
+[dir="rtl"] .timeline-nav-left {
+  left: auto;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+[dir="rtl"] .timeline-nav-right {
+  right: auto;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+/* Flip arrow directions for RTL */
+[dir="rtl"] .timeline-nav-left::before {
+  content: '›'; /* Right arrow for left button in RTL */
+}
+
+[dir="rtl"] .timeline-nav-right::before {
+  content: '‹'; /* Left arrow for right button in RTL */
+}
+
+/* Adjust scrolling behavior for RTL timeline */
+[dir="rtl"] .timeline-section {
+  direction: rtl;
+}
+
+/* Adjust padding and margins for RTL */
+[dir="rtl"] .timeline-card {
+  text-align: right;
+}
+
+/* Adjust list item bullets and padding for RTL */
+[dir="rtl"] ul,
+[dir="rtl"] ol {
+  padding-right: 20px;
+  padding-left: 0;
+}
+
+/* Adjust header logo and content for RTL */
+[dir="rtl"] header {
+  text-align: center; /* Keep header centered in both directions */
+}
+
+/* Adjust any floating elements for RTL */
+[dir="rtl"] .float-left {
+  float: right;
+}
+
+[dir="rtl"] .float-right {
+  float: left;
+}
+
+/* Smooth transition when switching between LTR and RTL */
+html {
+  transition: direction 0.3s ease;
+}
+
+body {
+  transition: text-align 0.3s ease;
+}
+
+/* Optional: Class-based RTL adjustments (alternative to attribute selector) */
+body.rtl-layout {
+  direction: rtl;
+  text-align: right;
+}
+
+body.ltr-layout {
+  direction: ltr;
+  text-align: left;
+}
+
+
