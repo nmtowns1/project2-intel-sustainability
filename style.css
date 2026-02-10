@@ -5,6 +5,27 @@
   box-sizing: border-box;
 }
 
+/* Google Material Symbols styling */
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+/* Flexbox container for headings with icons */
+.icon-heading {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* In RTL mode, reverse the order so icons appear on opposite side */
+[dir="rtl"] .icon-heading {
+  flex-direction: row-reverse;
+}
+
 /* Skip link for keyboard accessibility */
 .skip-link {
   position: absolute;
